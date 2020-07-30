@@ -58,12 +58,16 @@ options:[
 },
 
 ]
-
+var count1=document.getElementById("count")
+count1=1
+count.innerHTML=count1+"/5"
 var question_count=0;
 function next(){
     question_count++;
     result()   
     show(question_count)
+    count1++
+    count.innerHTML=count1+"/5"
 }
 
 function show(e){
@@ -75,7 +79,7 @@ function show(e){
                         <li class="option">${questions[e].options[2]}</li>
                         <li class="option">${questions[e].options[3]}</li>
                     </ul>`
-                    
+
                     Active()
 }
 
@@ -97,27 +101,33 @@ function Active(){
 
 let num1=document.getElementById("num")
 num1=0;
+
 function result(){
 
     var active=document.getElementsByClassName("active")
               if(active[0].innerHTML==questions[0].answer){
                 num1+=10;
                 console.log(num.innerHTML=num1) 
+               
               }
               else if(active[0].innerHTML==questions[1].answer){
                 num1+=10;
                 console.log(num.innerHTML=num1) 
+               
               }
               else if(active[0].innerHTML==questions[2].answer){
                 num1+=10;
                 console.log(num.innerHTML=num1) 
+               
               }
               else if(active[0].innerHTML==questions[3].answer){
                 num1+=10;
                 console.log(num.innerHTML=num1) 
+               
               }
               else if(active[0].innerHTML==questions[4].answer){
                 num1+=10;
                 console.log(num.innerHTML=num1) 
+              
               }
     }
